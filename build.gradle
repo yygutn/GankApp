@@ -1,0 +1,58 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        kotlin_version = '1.0.3'
+        supportVersion = '23.4.0'
+
+        libSupportV7 = "com.android.support:appcompat-v7:$supportVersion"
+        libSupportRecyclerView = "com.android.support:recyclerview-v7:$supportVersion"
+        libSupportDesign = "com.android.support:design:$supportVersion"
+
+        /*base adapter lib*/
+        /*mvp lib*/
+        libMvp = 'com.hannesdorfmann.mosby:mvp:2.0.1'
+        libMvpViewState = 'com.hannesdorfmann.mosby:viewstate:2.0.1'
+        /*rx-android-java*/
+        libRxJava = 'io.reactivex:rxjava:+'
+        libRxAndroid = 'io.reactivex:rxandroid:+'
+        libRxAdapter_Java = 'com.squareup.retrofit2:adapter-rxjava:+'
+        libRxLifecycle = 'com.trello:rxlifecycle:+'
+        libRxLifecycle_components = 'com.trello:rxlifecycle-components:+'
+        /*retrofit*/
+        libRetrofit = 'com.squareup.retrofit2:retrofit:2.+'
+        libRetrofit_convert_gson = 'com.squareup.retrofit2:converter-gson:+'
+        libRetrofit_Adapter_RxJava = 'com.squareup.retrofit2:adapter-rxjava:+'
+        libGson = 'com.google.code.gson:gson:+'
+        //logcat
+        libLogger = 'com.orhanobut:logger:1.15'
+        //baseAdapter
+        libRecAdapter =  'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.7'
+        //PhotoView_图片缩放控件
+        libPhotoView = 'com.commit451:PhotoView:1.2.4'
+        //Picasso-图片加载框架
+        libPicasso = 'com.squareup.picasso:picasso:2.5.2'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.5.2'
+    }
+}
