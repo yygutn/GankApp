@@ -1,13 +1,19 @@
 package com.jumy.gankapp.ui
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.jumy.gankapp.R
+import com.jumy.gankapp.common.BaseActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
+    override fun getLayoutID(): Int {
+        return R.layout.activity_main
+    }
 
+    override fun getMenuID(): Int {
+        return R.menu.main
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setTitle("你好",true)
     }
 }
