@@ -2,9 +2,9 @@ package com.jumy.gankapp.ui
 
 import android.os.Bundle
 import com.jumy.gankapp.R
-import com.jumy.gankapp.common.BaseActivity
+import com.jumy.gankapp.common.BaseToolBarActivity
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseToolBarActivity() {
     override fun getLayoutID(): Int {
         return R.layout.activity_main
     }

@@ -1,22 +1,27 @@
 package com.jumy.gankapp
 
 import android.app.Application
+import android.content.Context
+import com.jumy.gankapp.common.BaseToolBarActivity
 import com.orhanobut.logger.LogLevel
 import com.orhanobut.logger.Logger
+import java.util.*
 import kotlin.properties.Delegates
 
 /**
  * User: Jumy (yygutn@gmail.com)
  * Date: 16/8/13  下午3:49
  */
-class App : Application() {
+class App : Application(){
     companion object {
-        private var instance by Delegates.notNull<App>()
+        var instance by Delegates.notNull<App>()
+        lateinit var AppContext: Context
     }
 
     override fun onCreate() {
         super.onCreate()
         instance = this
+        AppContext = this
         //debug模式下输出日志，否则不输出
         if (BuildConfig.DEBUG) {
             Logger.init("Jumy").hideThreadInfo().methodOffset(0)
