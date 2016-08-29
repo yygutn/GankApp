@@ -3,14 +3,13 @@
 buildscript {
     ext.kotlin_version = '1.0.3'
     ext {
-        kotlin_version = '1.0.3'
-        supportVersion = '23.4.0'
 
-        libSupportV7 = "com.android.support:appcompat-v7:$supportVersion"
-        libSupportRecyclerView = "com.android.support:recyclerview-v7:$supportVersion"
-        libSupportDesign = "com.android.support:design:$supportVersion"
+        libSupportV7 = 'com.android.support:appcompat-v7:23.4.0'
+        libSupportRecyclerView = 'com.android.support:recyclerview-v7:23.4.0'
+        libSupportDesign = 'com.android.support:design:23.4.0'
 
-        /*base adapter lib*/
+        /*kotlin lib*/
+        libKotlinStdLib = 'org.jetbrains.kotlin:kotlin-stdlib:1.0.3'
         /*mvp lib*/
         libMvp = 'com.hannesdorfmann.mosby:mvp:2.0.1'
         libMvpViewState = 'com.hannesdorfmann.mosby:viewstate:2.0.1'

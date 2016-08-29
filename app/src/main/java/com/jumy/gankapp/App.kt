@@ -2,10 +2,8 @@ package com.jumy.gankapp
 
 import android.app.Application
 import android.content.Context
-import com.jumy.gankapp.common.BaseToolBarActivity
 import com.orhanobut.logger.LogLevel
 import com.orhanobut.logger.Logger
-import java.util.*
 import kotlin.properties.Delegates
 
 /**
